@@ -1,0 +1,14 @@
+entrepreneur.investmentRound.list.label.title = Título
+entrepreneur.investmentRound.list.label.ticker = Ticker
+
+entrepreneur.investmentRound.form.label.title = Título
+entrepreneur.investmentRound.form.label.description = Descripción
+entrepreneur.investmentRound.form.label.date = Fecha de creación
+entrepreneur.investmentRound.form.label.ticker = Ticker
+entrepreneur.investmentRound.form.label.type = Tipo
+entrepreneur.investmentRound.form.label.moneyAmount = Cantidad de dinero
+entrepreneur.investmentRound.form.label.moreInformation = Mas información
+
+entrepreneur.investmentRound.form.button.return = Volver
+entrepreneur.investmentRound.form.button.activities = Actividades
+entrepreneur.investmentRound.form.button.applications = Aplicaciones para esta ronda de inversión
