@@ -35,6 +35,8 @@ public class EntrepreneurApplicationController extends AbstractController<Entrep
 	private EntrepreneurApplicationListByIRService		listByIRService;
 	@Autowired
 	private EntrepreneurApplicationShowService			showService;
+	@Autowired
+	private EntrepreneurApplicationUpdateStatusService	updateService;
 	// Constructors -----------------------------------------------------------
 
 
@@ -42,6 +44,7 @@ public class EntrepreneurApplicationController extends AbstractController<Entrep
 	private void initialise() {
 		super.addCustomCommand(CustomCommand.LIST_BY_IR, BasicCommand.LIST, this.listByIRService);
 		super.addCustomCommand(CustomCommand.LIST_BY_MY_IR, BasicCommand.LIST, this.listByMyIRService);
+		super.addCustomCommand(CustomCommand.UPDATE_STATUS, BasicCommand.UPDATE, this.updateService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 

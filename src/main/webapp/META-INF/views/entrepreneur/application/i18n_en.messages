@@ -12,3 +12,7 @@ entrepreneur.application.form.label.status = Status
 entrepreneur.application.form.label.justification = Justification
 
 entrepreneur.application.form.button.return = Return
+entrepreneur.application.form.button.accept = Accept
+entrepreneur.application.form.button.reject = Reject
+
+entrepreneur.application.error.justificationMissing = You must justificate why you reject with at least 10 characters

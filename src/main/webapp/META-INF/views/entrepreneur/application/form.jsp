@@ -25,4 +25,8 @@
 	<acme:form-textbox code="entrepreneur.application.form.label.status" path="status" readonly="true"/>
 	<acme:form-textbox code="entrepreneur.application.form.label.justification" path="justification"/>
 	<acme:form-return code="entrepreneur.application.form.button.return"/>
+	<jstl:if test="${status=='PENDING'}">
+		<acme:form-submit code="entrepreneur.application.form.button.accept" action="../application/update_status?newStatus=ACCEPTED"/>
+		<acme:form-submit code="entrepreneur.application.form.button.reject" action="../application/update_status?newStatus=REJECTED"/>
+	</jstl:if>
 </acme:form>

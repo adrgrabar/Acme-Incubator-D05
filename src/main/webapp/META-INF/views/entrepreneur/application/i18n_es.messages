@@ -12,3 +12,7 @@ entrepreneur.application.form.label.status = Estado
 entrepreneur.application.form.label.justification = Justificación
 
 entrepreneur.application.form.button.return = Volver
+entrepreneur.application.form.button.accept = Aceptar
+entrepreneur.application.form.button.accept = Rechazar
+
+entrepreneur.application.error.justificationMissing = Debes justificar porque rechazas con almenos 10 caracteres
