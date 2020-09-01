@@ -76,12 +76,14 @@ master.menu.consumer.favourite-link = Enlace favorito
 
 master.menu.entrepreneur = Empresario
 master.menu.entrepreneur.investmentRound = Mis rondas de inversión
+master.menu.entrepreneur.investmentRound.create = Crear una ronda de inversión
 master.menu.entrepreneur.application = Lista de aplicaciones a mis rondas de inversión
 
 # master.menu.investor ########################################################
 
 master.menu.investor = Inversor
 master.menu.investor.application = Mis aplicaciones
+master.menu.investor.investmentRound = Rondas de inversión
 
 # master.menu.user-account ####################################################
 

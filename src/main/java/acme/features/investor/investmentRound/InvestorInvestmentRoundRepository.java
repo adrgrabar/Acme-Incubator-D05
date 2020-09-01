@@ -10,27 +10,23 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.entrepreneur.activity;
+package acme.features.investor.investmentRound;
 
 import java.util.Collection;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import acme.entities.investmentRounds.Activity;
 import acme.entities.investmentRounds.InvestmentRound;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface EntrepreneurActivityRepository extends AbstractRepository {
+public interface InvestorInvestmentRoundRepository extends AbstractRepository {
 
-	@Query("select a from Activity a where a.investmentRound.id=?1")
-	Collection<Activity> findByInvestmentRound(Integer id);
-
-	@Query("select a from Activity a where a.id=?1")
-	Activity findOneById(Integer id);
+	@Query("select ir from InvestmentRound ir where ir.published=1")
+	Collection<InvestmentRound> findPublished();
 
 	@Query("select ir from InvestmentRound ir where ir.id=?1")
-	InvestmentRound findOneIRById(Integer id);
+	InvestmentRound findOneById(Integer id);
 
 }

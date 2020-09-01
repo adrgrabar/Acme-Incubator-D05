@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.entrepreneur.activity;
+package acme.features.investor.activity;
 
 import java.util.Collection;
 
@@ -22,7 +22,7 @@ import acme.entities.investmentRounds.InvestmentRound;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface EntrepreneurActivityRepository extends AbstractRepository {
+public interface InvestorActivityRepository extends AbstractRepository {
 
 	@Query("select a from Activity a where a.investmentRound.id=?1")
 	Collection<Activity> findByInvestmentRound(Integer id);

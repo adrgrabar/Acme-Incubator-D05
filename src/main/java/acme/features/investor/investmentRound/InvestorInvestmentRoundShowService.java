@@ -1,40 +1,32 @@
 
-package acme.features.entrepreneur.investmentRound;
+package acme.features.investor.investmentRound;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.investmentRounds.InvestmentRound;
-import acme.entities.roles.Entrepreneur;
+import acme.entities.roles.Investor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class EntrepreneurInvestmentRoundShowService implements AbstractShowService<Entrepreneur, InvestmentRound> {
+public class InvestorInvestmentRoundShowService implements AbstractShowService<Investor, InvestmentRound> {
 
 	@Autowired
-	EntrepreneurInvestmentRoundRepository repository;
+	InvestorInvestmentRoundRepository repository;
 
 
 	@Override
 	public boolean authorise(final Request<InvestmentRound> request) {
 		assert request != null;
 
-		boolean result;
 		InvestmentRound ir;
 		Integer irId;
-		Principal principal;
-		Entrepreneur entrepreneur;
 		irId = request.getModel().getInteger("id");
 		ir = this.repository.findOneById(irId);
 
-		principal = request.getPrincipal();
-		entrepreneur = ir.getEntrepreneur();
-		result = entrepreneur.getUserAccount().getId() == principal.getAccountId();
-
-		return result;
+		return ir.getPublished();
 	}
 
 	@Override

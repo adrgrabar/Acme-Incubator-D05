@@ -14,6 +14,9 @@ package acme.features.entrepreneur.investmentRound;
 
 import java.util.Collection;
 
+import javax.transaction.Transactional;
+
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
@@ -32,5 +35,22 @@ public interface EntrepreneurInvestmentRoundRepository extends AbstractRepositor
 
 	@Query("select e from Entrepreneur e where e.userAccount.id = ?1")
 	Entrepreneur findOneEntrepreneurByUserAccountId(Integer id);
+
+	@Query("select e from Entrepreneur e where e.id=?1")
+	Entrepreneur findOneEntrepreneurById(Integer entrepreneurId);
+
+	@Query("select sum(a.budget.amount) from Activity a where a.investmentRound.id=?1")
+	Double sumActivitiesOffer(Integer investmentRoundId);
+
+	@Modifying
+	@Transactional
+	@Query("delete from Activity a where a.investmentRound.id=?1")
+	void deleteActivitiesOfIR(int id);
+
+	@Query("select cs.spamWords from CustomisationParameters cs")
+	String getSpamWords();
+
+	@Query("select cs.spamThreshold from CustomisationParameters cs")
+	Double getSpamThreshold();
 
 }

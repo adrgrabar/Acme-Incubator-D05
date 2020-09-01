@@ -410,4 +410,9 @@
 		<property name="investor" ref="investor2Investor" />
 	</bean>
 
+	<bean id="customisationParameters01" class="acme.entities.customisationParameters.CustomisationParameters">
+		<property name="spamWords" value="sex, hardcore, viagra, cialis, nigeria, you've won, million dollar, sexo, has ganado, millón de euros" />
+		<property name="spamThreshold" value="2.5" />
+	</bean>
+
 </beans>

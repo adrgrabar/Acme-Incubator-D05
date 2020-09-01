@@ -35,7 +35,7 @@ master.menu.anonymous.technologyRecord = Technologies
 
 # master.menu.authenticated ###################################################
 
-master.menu.authenticated = Athenticated
+master.menu.authenticated = Authenticated
 master.menu.authenticated.notice = Active notices
 master.menu.authenticated.toolRecord = Tool records
 master.menu.authenticated.technologyRecord = Technologies
@@ -76,12 +76,14 @@ master.menu.consumer.favourite-link = Favourite link
 
 master.menu.entrepreneur = Entrepreneur
 master.menu.entrepreneur.investmentRound = My investment rounds
+master.menu.entrepreneur.investmentRound.create = Create an investment round
 master.menu.entrepreneur.application = List applications to my investment rounds
 
 # master.menu.investor ########################################################
 
 master.menu.investor = Investor
 master.menu.investor.application = My applications
+master.menu.investor.investmentRound = Investment rounds
 
 # master.menu.user-account ####################################################
 

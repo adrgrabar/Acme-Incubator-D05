@@ -32,6 +32,7 @@ public class Application extends DomainEntity {
 	private String				ticker;
 
 	@Past
+	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				date;
 

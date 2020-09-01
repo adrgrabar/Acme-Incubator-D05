@@ -1,5 +1,5 @@
 
-package acme.features.entrepreneur.activity;
+package acme.features.investor.activity;
 
 import java.util.Collection;
 
@@ -8,38 +8,29 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.investmentRounds.Activity;
 import acme.entities.investmentRounds.InvestmentRound;
-import acme.entities.roles.Entrepreneur;
+import acme.entities.roles.Investor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class EntrepreneurActivityListByIRService implements AbstractListService<Entrepreneur, Activity> {
+public class InvestorActivityListByIRService implements AbstractListService<Investor, Activity> {
 
 	@Autowired
-	EntrepreneurActivityRepository repository;
+	InvestorActivityRepository repository;
 
 
 	@Override
 	public boolean authorise(final Request<Activity> request) {
 		assert request != null;
 
-		boolean result;
 		InvestmentRound ir;
 		Integer irId;
 
 		irId = request.getModel().getInteger("irId");
 		ir = this.repository.findOneIRById(irId);
 
-		Principal principal;
-		Entrepreneur entrepreneur;
-
-		principal = request.getPrincipal();
-		entrepreneur = ir.getEntrepreneur();
-		result = principal.getAccountId() == entrepreneur.getUserAccount().getId();
-
-		return result;
+		return ir.getPublished();
 	}
 
 	@Override

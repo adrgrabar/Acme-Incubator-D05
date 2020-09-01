@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.entrepreneur.activity;
+package acme.features.investor.activity;
 
 import javax.annotation.PostConstruct;
 
@@ -20,25 +20,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import acme.components.CustomCommand;
 import acme.entities.investmentRounds.Activity;
-import acme.entities.roles.Entrepreneur;
+import acme.entities.roles.Investor;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 
 @Controller
-@RequestMapping("/entrepreneur/activity/")
-public class EntrepreneurActivityController extends AbstractController<Entrepreneur, Activity> {
+@RequestMapping("/investor/activity/")
+public class InvestorActivityController extends AbstractController<Investor, Activity> {
 
 	// Internal state ---------------------------------------------------------
 	@Autowired
-	private EntrepreneurActivityListByIRService	listByIRService;
+	private InvestorActivityListByIRService	listByIRService;
 	@Autowired
-	private EntrepreneurActivityShowService		showService;
-	@Autowired
-	private EntrepreneurActivityCreateService	createService;
-	@Autowired
-	private EntrepreneurActivityUpdateService	updateService;
-	@Autowired
-	private EntrepreneurActivityDeleteService	deleteService;
+	private InvestorActivityShowService		showService;
 	// Constructors -----------------------------------------------------------
 
 
@@ -46,9 +40,6 @@ public class EntrepreneurActivityController extends AbstractController<Entrepren
 	private void initialise() {
 		super.addCustomCommand(CustomCommand.LIST_BY_IR, BasicCommand.LIST, this.listByIRService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
-		super.addBasicCommand(BasicCommand.CREATE, this.createService);
-		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
-		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 	}
 
 }
