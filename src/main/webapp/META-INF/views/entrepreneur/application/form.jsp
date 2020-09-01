@@ -16,11 +16,13 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:form-textbox code="entrepreneur.application.form.label.ticker" path="ticker"/>
-	<acme:form-moment code="entrepreneur.application.form.label.date" path="date"/>
-	<acme:form-textbox code="entrepreneur.application.form.label.statement" path="statement"/>
-	<acme:form-money code="entrepreneur.application.form.label.offer" path="offer"/>
-	<acme:form-textbox code="entrepreneur.application.form.label.investmentRoundTicker" path="investmentRound.ticker"/>
-	<acme:form-textbox code="entrepreneur.application.form.label.investmentRoundTitle" path="investmentRound.title"/>
+	<acme:form-textbox code="entrepreneur.application.form.label.ticker" path="ticker" readonly="true"/>
+	<acme:form-moment code="entrepreneur.application.form.label.date" path="date" readonly="true"/>
+	<acme:form-textbox code="entrepreneur.application.form.label.statement" path="statement" readonly="true"/>
+	<acme:form-money code="entrepreneur.application.form.label.offer" path="offer" readonly="true"/>
+	<acme:form-textbox code="entrepreneur.application.form.label.investmentRoundTicker" path="investmentRound.ticker" readonly="true"/>
+	<acme:form-textbox code="entrepreneur.application.form.label.investmentRoundTitle" path="investmentRound.title" readonly="true"/>
+	<acme:form-textbox code="entrepreneur.application.form.label.status" path="status" readonly="true"/>
+	<acme:form-textbox code="entrepreneur.application.form.label.justification" path="justification"/>
 	<acme:form-return code="entrepreneur.application.form.button.return"/>
 </acme:form>

@@ -14,9 +14,7 @@ investor.investmentRound.form.button.return = Volver
 investor.investmentRound.form.button.activities = Actividades
 investor.investmentRound.form.button.activities.create = Crear actividad
 investor.investmentRound.form.button.applications = Aplicaciones para esta ronda de inversión
-investor.investmentRound.form.button.update = Actualizar
-investor.investmentRound.form.button.create = Crear
-investor.investmentRound.form.button.delete = Borrar
+investor.investmentRound.form.button.apply = Aplicar
 
 investor.investmentRound.error.activitiesNull = Debes haber creado actividades
 investor.investmentRound.error.activitiesSum = Las ofertas de tus actividades deben sumar la cantidad de dinero de tu ronda de inversión

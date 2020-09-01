@@ -379,6 +379,7 @@
 		<property name="date" value="2020/01/20 10:13" />
 		<property name="statement" value="Statement 1" />
 		<property name="offer" value="EUR 100" />
+		<property name="status" value="PENDING" />
 		<property name="investmentRound" ref="investmentRound01" />
 		<property name="investor" ref="investor1Investor" />
 	</bean>
@@ -388,6 +389,7 @@
 		<property name="date" value="2020/01/20 15:13" />
 		<property name="statement" value="Statement 2" />
 		<property name="offer" value="EUR 50" />
+		<property name="status" value="PENDING" />
 		<property name="investmentRound" ref="investmentRound01" />
 		<property name="investor" ref="investor2Investor" />
 	</bean>
@@ -397,6 +399,7 @@
 		<property name="date" value="2020/03/20 10:13" />
 		<property name="statement" value="Statement 3" />
 		<property name="offer" value="EUR 300" />
+		<property name="status" value="PENDING" />
 		<property name="investmentRound" ref="investmentRound02" />
 		<property name="investor" ref="investor1Investor" />
 	</bean>
@@ -406,6 +409,7 @@
 		<property name="date" value="2020/03/21 10:13" />
 		<property name="statement" value="Statement 4" />
 		<property name="offer" value="EUR 800" />
+		<property name="status" value="PENDING" />
 		<property name="investmentRound" ref="investmentRound02" />
 		<property name="investor" ref="investor2Investor" />
 	</bean>

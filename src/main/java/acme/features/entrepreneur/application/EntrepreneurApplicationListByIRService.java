@@ -29,7 +29,7 @@ public class EntrepreneurApplicationListByIRService implements AbstractListServi
 		InvestmentRound ir;
 		Integer irId;
 
-		irId = request.getModel().getInteger("id");
+		irId = request.getModel().getInteger("irId");
 		ir = this.repository.findOneIRById(irId);
 
 		Principal principal;
@@ -58,6 +58,6 @@ public class EntrepreneurApplicationListByIRService implements AbstractListServi
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "investmentRound.title");
+		request.unbind(entity, model, "ticker", "investmentRound.title", "status");
 	}
 }

@@ -51,6 +51,6 @@ public class EntrepreneurApplicationListByMyIRService implements AbstractListSer
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "investmentRound.title");
+		request.unbind(entity, model, "ticker", "investmentRound.title", "status");
 	}
 }

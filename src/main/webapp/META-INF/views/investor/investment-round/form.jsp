@@ -26,4 +26,5 @@
 	<acme:form-checkbox code="investor.investmentRound.form.label.published" path="published" readonly="true"/>
 	<acme:form-return code="investor.investmentRound.form.button.return"/>
 	<acme:form-submit method="get" code="investor.investmentRound.form.button.activities" action="../activity/list_by_ir?irId=${id}"/>
+	<acme:form-submit method="get" code="investor.investmentRound.form.button.apply" action="../application/create?irId=${id}"/>
 </acme:form>

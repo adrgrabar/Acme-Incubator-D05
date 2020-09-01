@@ -52,4 +52,10 @@ public class Application extends DomainEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	private Investor			investor;
+
+	@NotNull
+	@Pattern(regexp = "PENDING|ACCEPTED|REJECTED")
+	private String				status;
+
+	private String				justification;
 }

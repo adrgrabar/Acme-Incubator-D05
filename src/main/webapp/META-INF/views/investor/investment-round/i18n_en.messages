@@ -14,10 +14,7 @@ investor.investmentRound.form.button.return = Return
 investor.investmentRound.form.button.activities = Activities
 investor.investmentRound.form.button.activities.create = Create activity
 investor.investmentRound.form.button.applications = Applications to this investment round
-investor.investmentRound.form.button.update = Update
-investor.investmentRound.form.button.create = Create
-investor.investmentRound.form.button.delete = Delete
-investor.investmentRound.form.button.publish = Publish
+investor.investmentRound.form.button.apply = Apply
 
 investor.investmentRound.error.activitiesNull = You must have activities created
 investor.investmentRound.error.activitiesSum = Your activity offers must sum up your investment round money amount

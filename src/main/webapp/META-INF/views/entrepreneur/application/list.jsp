@@ -5,5 +5,6 @@
 
 <acme:list>
 	<acme:list-column code="entrepreneur.application.list.label.ticker" path="ticker" width="35%"/>
-	<acme:list-column code="entrepreneur.application.list.label.investmentRoundTitle" path="investmentRound.title" width="65%"/>
+	<acme:list-column code="entrepreneur.application.list.label.investmentRoundTitle" path="investmentRound.title" width="45%"/>
+	<acme:list-column code="entrepreneur.application.list.label.status" path="status" width="20%"/>
 </acme:list>
