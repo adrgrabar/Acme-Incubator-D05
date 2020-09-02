@@ -15,10 +15,10 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:form readonly="${published}">
+<acme:form readonly="true">
 	<acme:form-textbox code="investor.investmentRound.form.label.title" path="title"/>
 	<acme:form-textbox code="investor.investmentRound.form.label.description" path="description"/>
-	<acme:form-textbox code="investor.investmentRound.form.label.ticker" path="ticker"/>
+	<acme:form-textbox code="investor.investmentRound.form.label.ticker" path="ticker" placeholder="XXX-00-000000"/>
 	<acme:form-moment code="investor.investmentRound.form.label.date" path="date" readonly="true"/>
 	<acme:form-textbox code="investor.investmentRound.form.label.type" path="type"/>
 	<acme:form-money code="investor.investmentRound.form.label.moneyAmount" path="moneyAmount"/>
